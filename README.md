@@ -13,3 +13,8 @@ Commands:
 
 1. laravel new forum
 2. php artisan make:model Thread -mr
+3. php artisan make:model Reply -mc
+4. php artisan migrate
+5. php artisan tinker
+    6. $threads = factory('App\Thread', 50)->create();
+    7. $threads->each(function ($thread) { factory('App\Reply', 10)->create(['thread_id' => $thread->id]); });
