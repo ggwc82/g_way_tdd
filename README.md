@@ -18,3 +18,4 @@ Commands:
 5. php artisan tinker
     6. $threads = factory('App\Thread', 50)->create();
     7. $threads->each(function ($thread) { factory('App\Reply', 10)->create(['thread_id' => $thread->id]); });
+8. php artisan make:auth
